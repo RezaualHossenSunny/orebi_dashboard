@@ -18,8 +18,8 @@ const items = [
 
   ]),
   getItem('Product', 'sub2', <AppstoreOutlined />, [
-    getItem('Add Product', '3'),
-    getItem('All Producat', '4'),
+    getItem('Add Product', '/addprodacet'),
+    getItem('All Producat', '/allproducat'),
 
   ]),
   {
@@ -56,7 +56,7 @@ const Home = () => {
    
 
         <Row>
-      <Col span={6}>
+      <Col span={8}>
       <Menu
       onClick={onClick}
       style={{
@@ -66,7 +66,7 @@ const Home = () => {
       items={items}
     />
       </Col>
-      <Col span={18}>
+      <Col span={16}>
         <Outlet/>
       </Col>
     </Row>
