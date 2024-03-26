@@ -9,6 +9,7 @@ import Login from "./Component/Login";
 import Error from "./Component/Error";
 import Addprodact from "./Component/Addprodact";
 import Allprodect from "./Component/Allprodect";
+import Allvariant from "./Component/Allvariant";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
         <Route path="/login" element={<Login />}></Route>
         <Route path="/addprodacet" element={<Addprodact />}></Route>
         <Route path="/allproducat" element={<Allprodect />}></Route>
+        <Route path="/allvariant" element={<Allvariant />}></Route>
       </Route>
 
       <Route path="*" element={<Error />}></Route>

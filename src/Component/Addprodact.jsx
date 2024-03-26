@@ -33,7 +33,7 @@ const Addprodact = () => {
   const [store, setStore] = useState([]);
   const [data, setData] = useState([]);
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
-  const [producat, Setprodactname] = useState('');
+  const [producat, Setprodactname]=useState('');
  const [storeName, SetstoreName]=useState('')
 
 
@@ -66,12 +66,19 @@ const Addprodact = () => {
     console.log(producat);
     console.log(draftToHtml(convertToRaw(editorState.getCurrentContent())));
     console.log(storeName);
+
+    let data = axios.post('http://localhost:3000/api/v1/producat/crateprodact',{
+      name:producat,
+      description:draftToHtml(convertToRaw(editorState.getCurrentContent())),
+      store:storeName
+    })
+    console.log(data);
   }
 
   return (
     <div>
-      <h1 onChange={(e) => Setprodactname(e)}> Product Name:</h1>
-      <Input placeholder="Product Name" />
+      <h1> Product Name:</h1>
+      <Input onChange={(e)=> Setprodactname(e.target.value)}  placeholder="Product Name" />
 
       <h1> Product Description:</h1>
       <Editor

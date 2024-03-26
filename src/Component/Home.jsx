@@ -20,6 +20,7 @@ const items = [
   getItem('Product', 'sub2', <AppstoreOutlined />, [
     getItem('Add Product', '/addprodacet'),
     getItem('All Producat', '/allproducat'),
+    getItem('All Variant', '/allvariant'),
 
   ]),
   {
