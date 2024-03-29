@@ -10,15 +10,18 @@ import Error from "./Component/Error";
 import Addprodact from "./Component/Addprodact";
 import Allprodect from "./Component/Allprodect";
 import Allvariant from "./Component/Allvariant";
+import Registration from "./Component/Registration";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
+      <Route path="/registration" element={<Registration />}></Route>
       <Route path="/" element={<Home />}>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/addprodacet" element={<Addprodact />}></Route>
         <Route path="/allproducat" element={<Allprodect />}></Route>
         <Route path="/allvariant" element={<Allvariant />}></Route>
+   
       </Route>
 
       <Route path="*" element={<Error />}></Route>

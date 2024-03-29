@@ -27,9 +27,7 @@ console.log('variant',variants);
       title: 'Name',
       dataIndex: 'prodcat',
       key: 'prodcat',
-      render: (_, record) => (
-    console.log(record.name)
-      ),
+      
     },
     {
       title: 'image',
