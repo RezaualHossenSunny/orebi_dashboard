@@ -1,37 +1,22 @@
 
 import React, { useState } from 'react';
-import { PlusOutlined } from '@ant-design/icons';
+
 import {
   Alert,
   Button,
-  Cascader,
-  Checkbox,
-  ColorPicker,
-  DatePicker,
+
   Form,
   Input,
-  InputNumber,
-  Radio,
-  Select,
-  Slider,
-  Switch,
-  TreeSelect,
-  Upload,
+
 } from 'antd';
 import Card from 'antd/es/card/Card';
 import axios from 'axios';
-const { RangePicker } = DatePicker;
-const { TextArea } = Input;
-const normFile = (e) => {
-  if (Array.isArray(e)) {
-    return e;
-  }
-  return e?.fileList;
-};
+
+
 const Registration = () => {
   const [eror,Seteror]=useState('');
   const [sucess,Setsucess]=useState('');
-    const [componentDisabled, setComponentDisabled] = useState(true);
+
     const [registrationData,setregistriondsata]=useState({
       firstname:'',
       lastname:'',
@@ -63,7 +48,7 @@ const Registration = () => {
 
         if(data.data.error){
           Seteror(data.data.error);
-        Setsucess('')
+      
           set
         } else{
           Setsucess(data.data.success);
