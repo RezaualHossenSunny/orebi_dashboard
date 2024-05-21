@@ -13,7 +13,15 @@ import {
 } from 'antd';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { logeinfo } from '../slice/userSlice';
+  
+
+
+
 const Login = () => {
+  const dispatch =useDispatch()
+
 
   const [eror,Seteror]=useState('');
   const [sucess,Setsucess]=useState('');
@@ -26,6 +34,8 @@ const Login = () => {
   });
 
 const navigate=useNavigate();
+
+
 
   const handleChange = (e) => {
     console.log(e);
@@ -51,8 +61,12 @@ const handleSignin= async()=>{
     if(data.data.role=="member"){
       Seteror("this admin panel is for only admin && mercent")
     }else{
-     
+      // dispatch(LogeIn(data.data))
+
+      dispatch(logeinfo(data.data))
+    
       Setsucess(data.data.success);
+      
       Seteror('')
       setTimeout(() => {
         navigate('/')
