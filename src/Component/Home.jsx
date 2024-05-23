@@ -52,7 +52,7 @@ const navigate =useNavigate()
         },
       
         getItem('Catagory', 'sub3', <AppstoreOutlined />, [
-          getItem('Add Catagory', '5'),
+          getItem('Add Catagory', '/addcatagory'),
           getItem('All Catagory', '6'),
       
         ]),
@@ -61,8 +61,17 @@ const navigate =useNavigate()
         },
       
         getItem('SubCatagory', 'sub4', <AppstoreOutlined />, [
-          getItem('Add SubCatagory', '7'),
+          getItem('Add SubCatagory', '/addsubcatgory'),
           getItem('All SubCatagory', '8'),
+      
+        ]),
+        {
+          type: 'divider',
+        },
+
+        getItem('Approve Status', 'sub5', <AppstoreOutlined />, [
+          getItem('Catagory Status', '/catagorystatus'),
+          getItem('SubCatagory Status', '/subcatagorystatus'),
       
         ]),
         {

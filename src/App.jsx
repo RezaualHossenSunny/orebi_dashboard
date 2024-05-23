@@ -11,6 +11,10 @@ import Addprodact from "./Component/Addprodact";
 import Allprodect from "./Component/Allprodect";
 import Allvariant from "./Component/Allvariant";
 import Registration from "./Component/Registration";
+import Catagorystatus from "./Component/Catagory/Catagorystatus";
+import Subcatagorystaus from "./Component/Catagory/Subcatagorystaus";
+import Addcatagory from "./Component/Catagory/Addcatagory";
+import Addsubcatagory from "./Component/Catagory/Addsubcatagory";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +25,15 @@ const router = createBrowserRouter(
         <Route path="/addprodacet" element={<Addprodact />}></Route>
         <Route path="/allproducat" element={<Allprodect />}></Route>
         <Route path="/allvariant" element={<Allvariant />}></Route>
+        <Route path="/catagorystatus" element={<Catagorystatus />}></Route>
+        <Route path="/subcatagorystatus" element={<Subcatagorystaus />}></Route>
+
+
+
+        <Route path="/addcatagory" element={<Addcatagory />}></Route>
+        <Route path="/addsubcatgory" element={<Addsubcatagory />}></Route>
+
+        
    
       </Route>
 
