@@ -77,6 +77,15 @@ const navigate =useNavigate()
         {
           type: 'divider',
         },
+
+        getItem('Approve ', 'sub6', <AppstoreOutlined />, [
+          getItem('Approve Catagory Status', '/approvecatagorystatus'),
+          getItem('Approve SubCatagory Status', '/approvesubcatagorystatus'),
+      
+        ]),
+        {
+          type: 'divider',
+        },
       
       
       ];
