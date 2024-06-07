@@ -6,15 +6,17 @@ import { render } from 'react-dom';
 const Approvecatagorystatus = () => {
 
   const [staus,setSatus]=useState('')
-console.log(staus);
+  
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
+    
     setIsModalOpen(true);
   };
 
   const handleOk = () => {
-    
+    console.log(staus);
     setIsModalOpen(false);
   };
 
@@ -75,29 +77,13 @@ console.log(staus);
               Edit Status
       </Button>
       <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-      <Select
-    labelInValue
-    defaultValue={{ value: 'wating', label: 'wating' }}
-    style={{ width: 120 }}
-    onChange={(e)=> setSatus(e)}
-    options={[
-      {
-        value: 'aprove',
-        label: 'aprove',
-      },
-      {
-        value: 'wating',
-        label: 'wating',
-      },
+ 
+  <Input onChange={(e)=> setSatus(e.target.value)} placeholder='give the status'/> 
+  
 
-      {
-        value: 'reject',
-        label: 'reject',
-      },
-    ]}
-  />
+
       </Modal>
-            </>
+       </>
           )
          
 
