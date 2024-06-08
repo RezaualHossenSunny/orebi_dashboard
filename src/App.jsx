@@ -16,6 +16,8 @@ import Subcatagorystaus from "./Component/Catagory/Subcatagorystaus";
 import Addcatagory from "./Component/Catagory/Addcatagory";
 import Addsubcatagory from "./Component/Catagory/Addsubcatagory";
 import Approvecatagorystatus from "./Component/Catagory/Approvecatagorystatus";
+import AprroveSubcatagorystatus from "./Component/Catagory/AprroveSubcatagorystatus";
+import UserDatlis from "./Component/Catagory/UserDatlis";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,6 +37,8 @@ const router = createBrowserRouter(
         <Route path="/addsubcatgory" element={<Addsubcatagory />}></Route>
 
         <Route path="/approvecatagorystatus" element={<Approvecatagorystatus />}></Route>
+        <Route path="/approvesubcatagorystatus" element={<AprroveSubcatagorystatus />}></Route>
+        <Route path="/user" element={<UserDatlis />}></Route>
         
 
 

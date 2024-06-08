@@ -3,7 +3,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { render } from 'react-dom';
 
-const Approvecatagorystatus = () => {
+const AprroveSubcatagorystatus = () => {
 
   const [staus,setSatus]=useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,7 +17,7 @@ const Approvecatagorystatus = () => {
 
   const handleOk = () => {
 
-    const daat = axios.post('http://localhost:3000/api/v1/catagory/statuscatagory',{
+    const daat = axios.post('http://localhost:3000/api/v1/catagory/subcatagorystatus',{
       name:catgory, 
       status :staus
     })
@@ -42,7 +42,7 @@ const Approvecatagorystatus = () => {
        
           
         async function getAllcatagory() {
-          let data = await axios.get('http://localhost:3000/api/v1/catagory/getallcatagory')
+          let data = await axios.get('http://localhost:3000/api/v1/catagory/getAllsubcatagory')
           SetAllCatagory(data.data);
         }
         getAllcatagory()
@@ -119,4 +119,4 @@ const Approvecatagorystatus = () => {
   )
 }
 
-export default Approvecatagorystatus
+export default AprroveSubcatagorystatus

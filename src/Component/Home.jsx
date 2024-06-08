@@ -38,7 +38,7 @@ const navigate =useNavigate()
        data?.role == "admin" &&
         getItem('User', 'sub1', <UserAddOutlined />, [
           getItem('Mercent', '/login'),
-          getItem('Users', '2'),
+          getItem('Users', '/user'),
       
         ]),
         getItem('Product', 'sub2', <AppstoreOutlined />, [
@@ -77,7 +77,7 @@ const navigate =useNavigate()
         {
           type: 'divider',
         },
-
+        data?.role == "admin" &&
         getItem('Approve ', 'sub6', <AppstoreOutlined />, [
           getItem('Approve Catagory Status', '/approvecatagorystatus'),
           getItem('Approve SubCatagory Status', '/approvesubcatagorystatus'),
